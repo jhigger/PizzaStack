@@ -33,7 +33,8 @@ theme.typography.h2 = {
 const useStyles = makeStyles((theme) => ({
 	jumbotron: {
 		position: 'relative',
-		overflow: 'hidden'
+		overflow: 'hidden',
+		marginTop: '56px'
 	},
 	video: {
 		width: '100%',
@@ -58,10 +59,11 @@ const useStyles = makeStyles((theme) => ({
 		margin: '0 auto',
 		display: 'flex',
 		width: '50%',
-		borderRadius: '5em'
+		borderRadius: '5em',
+		background: 'black'
 	},
 	container: {
-		margin: theme.spacing(3)
+		padding: theme.spacing(3)
 	},
 	paper: {
 		padding: theme.spacing(2),
@@ -103,7 +105,7 @@ export default function Home() {
 			<Container className={classes.container} fixed>
 				<Grid container spacing={3}>
 					<Grid item xs={6}>
-						<Typography align="center" style={{padding: '10rem'}}>
+						<Typography align="center" style={{padding: '1rem'}}>
 							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui sunt
 							consequatur fuga tempore illo ipsum iste voluptatibus cupiditate?
 							Dolore possimus sunt necessitatibus reprehenderit amet quas.
@@ -131,7 +133,7 @@ export default function Home() {
 			</Container>
 
 			<Container className={classes.container} fixed>
-				<Grid container spacing={10}>
+				<Grid container spacing={3}>
 					{[one, two, three, four, five, six].map((image) => {
 						return (
 							<Grid item xs={4} key={image}>
