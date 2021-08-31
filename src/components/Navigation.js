@@ -77,7 +77,7 @@ export default function SwipeableTemporaryDrawer() {
 
 	return (
 		<div className={classes.root}>
-			<AppBar style={{background: 'black'}}>
+			<AppBar position="sticky" style={{background: 'black'}}>
 				<Toolbar>
 					<Box display={{xs: 'block', md: 'none'}}>
 						<IconButton
