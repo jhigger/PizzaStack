@@ -126,7 +126,7 @@ export default function SwipeableTemporaryDrawer() {
 						<IconButton
 							color="inherit"
 							component="a"
-							href="https://www.facebook.com/"
+							href="https://www.facebook.com/PizzaStackTM"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -135,7 +135,7 @@ export default function SwipeableTemporaryDrawer() {
 						<IconButton
 							color="inherit"
 							component="a"
-							href="https://www.instagram.com/"
+							href="https://www.instagram.com/pizza_stack_ph/"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
