@@ -17,6 +17,9 @@ import three from '../assets/3.png';
 import four from '../assets/4.png';
 import five from '../assets/5.png';
 import six from '../assets/6.png';
+import pizza1 from '../assets/pizza1.webp';
+import pizza2 from '../assets/pizza2.webp';
+import pizza3 from '../assets/pizza3.webp';
 
 const theme = createTheme();
 
@@ -33,8 +36,7 @@ theme.typography.h2 = {
 const useStyles = makeStyles((theme) => ({
 	jumbotron: {
 		position: 'relative',
-		overflow: 'hidden',
-		marginTop: '56px'
+		overflow: 'hidden'
 	},
 	video: {
 		width: '100%',
@@ -113,7 +115,7 @@ export default function Home() {
 						</Typography>
 					</Grid>
 					<Grid item xs={6}>
-						<img src={product} alt="product" width="75%" />
+						<img src={product} alt="product" width="100%" />
 					</Grid>
 				</Grid>
 			</Container>
@@ -121,13 +123,13 @@ export default function Home() {
 			<Container className={classes.container} fixed>
 				<Grid container spacing={5}>
 					<Grid item xs={4}>
-						<img src={product} alt="product" width="100%" />
+						<img src={pizza1} alt="product" width="100%" />
 					</Grid>
 					<Grid item xs={4}>
-						<img src={product} alt="product" width="100%" />
+						<img src={pizza2} alt="product" width="100%" />
 					</Grid>
 					<Grid item xs={4}>
-						<img src={product} alt="product" width="100%" />
+						<img src={pizza3} alt="product" width="100%" />
 					</Grid>
 				</Grid>
 			</Container>
