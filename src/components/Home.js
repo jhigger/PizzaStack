@@ -105,7 +105,7 @@ export default function Home() {
 			<Container className={classes.container} fixed>
 				<Grid container spacing={3}>
 					<Grid item xs={6}>
-						<Typography align="center" style={{padding: '1rem'}}>
+						<Typography align="center" style={{paddingTop: '50%'}}>
 							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui sunt
 							consequatur fuga tempore illo ipsum iste voluptatibus cupiditate?
 							Dolore possimus sunt necessitatibus reprehenderit amet quas.
