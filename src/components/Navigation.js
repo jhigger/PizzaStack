@@ -10,8 +10,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
 import {Link as RouterLink} from 'react-router-dom';
@@ -121,26 +119,6 @@ export default function SwipeableTemporaryDrawer() {
 								);
 							})}
 						</Box>
-					</Box>
-					<Box className={classes.socials}>
-						<IconButton
-							color="inherit"
-							component="a"
-							href="https://www.facebook.com/PizzaStackTM"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FacebookIcon />
-						</IconButton>
-						<IconButton
-							color="inherit"
-							component="a"
-							href="https://www.instagram.com/pizza_stack_ph/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<InstagramIcon />
-						</IconButton>
 					</Box>
 				</Toolbar>
 			</AppBar>
