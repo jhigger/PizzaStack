@@ -7,7 +7,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import {createTheme, ThemeProvider} from '@material-ui/core/styles';
-// import Paper from '@material-ui/core/Paper';
+import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 import product from '../assets/product.jpg';
@@ -120,7 +120,7 @@ export default function Home() {
 				</Grid>
 			</Container>
 
-			<Container className={classes.container} fixed>
+			<Paper className={classes.container} elevation={0}>
 				<Grid container spacing={5}>
 					<Grid item xs={4}>
 						<img src={pizza1} alt="product" width="100%" />
@@ -132,7 +132,7 @@ export default function Home() {
 						<img src={pizza3} alt="product" width="100%" />
 					</Grid>
 				</Grid>
-			</Container>
+			</Paper>
 
 			<Container className={classes.container} fixed>
 				<Grid container spacing={3}>
