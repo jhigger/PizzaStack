@@ -11,12 +11,12 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 import product from '../assets/product.jpg';
-import one from '../assets/1.png';
-import two from '../assets/2.png';
-import three from '../assets/3.png';
-import four from '../assets/4.png';
-import five from '../assets/5.png';
-import six from '../assets/6.png';
+import one from '../assets/1.webp';
+import two from '../assets/2.webp';
+import three from '../assets/3.webp';
+import four from '../assets/4.webp';
+import five from '../assets/5.webp';
+import six from '../assets/6.webp';
 import pizza1 from '../assets/pizza1.webp';
 import pizza2 from '../assets/pizza2.webp';
 import pizza3 from '../assets/pizza3.webp';
