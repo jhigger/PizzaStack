@@ -62,8 +62,8 @@ const useStyles = makeStyles((theme) => ({
 		left: '50%',
 		transform: 'translate(-50%,-50%)',
 		width: '100%',
-		padding: theme.spacing(3),
 		height: '100%',
+		padding: theme.spacing(3),
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center'
@@ -81,10 +81,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	container: {
 		padding: theme.spacing(3)
-	},
-	paper: {
-		padding: theme.spacing(2),
-		color: 'black'
 	}
 }));
 
@@ -145,13 +141,13 @@ export default function Home() {
 			<Box className={classes.container} bgcolor="black">
 				<Grid container spacing={5}>
 					<Grid item md={4}>
-						<img src={pizza1} alt="product" width="100%" />
+						<img src={pizza1} alt="pizzastack" width="100%" />
 					</Grid>
 					<Grid item md={4}>
-						<img src={pizza2} alt="product" width="100%" />
+						<img src={pizza2} alt="pizzastack" width="100%" />
 					</Grid>
 					<Grid item md={4}>
-						<img src={pizza3} alt="product" width="100%" />
+						<img src={pizza3} alt="pizzastack" width="100%" />
 					</Grid>
 				</Grid>
 			</Box>
@@ -161,7 +157,7 @@ export default function Home() {
 					{images.map((image, i) => {
 						return (
 							<Grid item md={6} key={i}>
-								<img src={image.default} alt="product" width="100%" />
+								<img src={image.default} alt="pizzastack" width="100%" />
 							</Grid>
 						);
 					})}
