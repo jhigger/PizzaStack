@@ -11,15 +11,17 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 import product from '../assets/product.jpg';
-import one from '../assets/1.webp';
-import two from '../assets/2.webp';
-import three from '../assets/3.webp';
-import four from '../assets/4.webp';
-import five from '../assets/5.webp';
-import six from '../assets/6.webp';
 import pizza1 from '../assets/pizza1.webp';
 import pizza2 from '../assets/pizza2.webp';
 import pizza3 from '../assets/pizza3.webp';
+
+function importAll(r) {
+	return r.keys().map(r);
+}
+
+const images = importAll(
+	require.context('../assets/gallery', false, /\.(png|jpe?g|webp)$/)
+);
 
 const theme = createTheme();
 
@@ -45,20 +47,34 @@ const useStyles = makeStyles((theme) => ({
 		objectFit: 'cover',
 		objectPosition: 'center center'
 	},
+	backdrop: {
+		position: 'absolute',
+		top: '50%',
+		left: '50%',
+		transform: 'translate(-50%,-50%)',
+		width: '100%',
+		height: '100%',
+		background: 'black',
+		opacity: 0.2
+	},
 	tagline: {
 		position: 'absolute',
 		top: '50%',
 		left: '50%',
 		transform: 'translate(-50%,-50%)',
 		width: '100%',
-		padding: theme.spacing(3)
+		padding: theme.spacing(3),
+		height: '100%',
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center'
 	},
 	text: {
 		color: 'white',
 		fontWeight: 'bold'
 	},
 	cta: {
-		margin: '0 auto',
+		margin: '5% auto',
 		display: 'flex',
 		width: '50%',
 		borderRadius: '5em',
@@ -69,7 +85,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	paper: {
 		padding: theme.spacing(2),
-		textAlign: 'center',
 		color: theme.palette.text.secondary
 	}
 }));
@@ -84,6 +99,7 @@ export default function Home() {
 				<video className={classes.video} autoPlay loop muted>
 					<source src={video} type="video/webm" />
 				</video>
+				<Box className={classes.backdrop} />
 				<Box className={classes.tagline}>
 					<ThemeProvider theme={theme}>
 						<Typography className={classes.text} align="center" variant="h2">
@@ -106,15 +122,22 @@ export default function Home() {
 
 			<Container className={classes.container} fixed>
 				<Grid container spacing={3}>
-					<Grid item xs={6}>
-						<Typography align="center" style={{paddingTop: '50%'}}>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui sunt
-							consequatur fuga tempore illo ipsum iste voluptatibus cupiditate?
-							Dolore possimus sunt necessitatibus reprehenderit amet quas.
-							Perspiciatis quas ullam voluptatum voluptate?
-						</Typography>
+					<Grid item md={6}>
+						<Box
+							display="flex"
+							height="100%"
+							alignItems="center"
+							justifyContent="center"
+						>
+							<Typography align="center">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui
+								sunt consequatur fuga tempore illo ipsum iste voluptatibus
+								cupiditate? Dolore possimus sunt necessitatibus reprehenderit
+								amet quas. Perspiciatis quas ullam voluptatum voluptate?
+							</Typography>
+						</Box>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item md={6}>
 						<img src={product} alt="product" width="100%" />
 					</Grid>
 				</Grid>
@@ -136,10 +159,10 @@ export default function Home() {
 
 			<Container className={classes.container} fixed>
 				<Grid container spacing={3}>
-					{[one, two, three, four, five, six].map((image) => {
+					{images.map((image, i) => {
 						return (
-							<Grid item xs={4} key={image}>
-								<img src={image} alt="product" width="100%" />
+							<Grid item xs={4} key={i}>
+								<img src={image.default} alt="product" width="100%" />
 							</Grid>
 						);
 					})}
