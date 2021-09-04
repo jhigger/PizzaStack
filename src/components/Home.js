@@ -7,7 +7,6 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import {createTheme, ThemeProvider} from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 import product from '../assets/product.jpg';
@@ -85,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	paper: {
 		padding: theme.spacing(2),
-		color: theme.palette.text.secondary
+		color: 'black'
 	}
 }));
 
@@ -143,25 +142,25 @@ export default function Home() {
 				</Grid>
 			</Container>
 
-			<Paper className={classes.container} elevation={0}>
+			<Box className={classes.container} bgcolor="black">
 				<Grid container spacing={5}>
-					<Grid item xs={4}>
+					<Grid item md={4}>
 						<img src={pizza1} alt="product" width="100%" />
 					</Grid>
-					<Grid item xs={4}>
+					<Grid item md={4}>
 						<img src={pizza2} alt="product" width="100%" />
 					</Grid>
-					<Grid item xs={4}>
+					<Grid item md={4}>
 						<img src={pizza3} alt="product" width="100%" />
 					</Grid>
 				</Grid>
-			</Paper>
+			</Box>
 
 			<Container className={classes.container} fixed>
 				<Grid container spacing={3}>
 					{images.map((image, i) => {
 						return (
-							<Grid item xs={4} key={i}>
+							<Grid item md={6} key={i}>
 								<img src={image.default} alt="product" width="100%" />
 							</Grid>
 						);
