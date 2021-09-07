@@ -32,16 +32,16 @@ export default function ApplicationForm() {
 			<Paper className={classes.paper}>
 				<Formik
 					initialValues={{
-						name: 'asd',
-						address: 'asd',
-						email: 'asd@asd.asd',
-						contact: 'asd',
-						company: 'asd',
-						purpose: 'asd\nasd\nasd',
-						location: 'asd\nasd',
-						active_passive: 'Passive and behind the scenes',
-						individual_partners: 'As an individual',
-						investment: 'asd'
+						name: '',
+						address: '',
+						email: '',
+						contact: '',
+						company: '',
+						purpose: '',
+						location: '',
+						active_passive: '',
+						individual_partners: '',
+						investment: ''
 					}}
 					validationSchema={Yup.object({
 						name: Yup.string()
