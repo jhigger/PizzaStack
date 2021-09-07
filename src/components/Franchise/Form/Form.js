@@ -2,7 +2,6 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import {makeStyles} from '@material-ui/core/styles';
 import {Paper, Typography} from '@material-ui/core';
-import TextField from '@material-ui/core/TextField';
 import SendIcon from '@material-ui/icons/Send';
 import {Grid} from '@material-ui/core';
 import {Formik} from 'formik';
@@ -14,6 +13,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import MyTextField from './MyTextField';
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -78,84 +78,34 @@ export default function ApplicationForm() {
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
-									<TextField
-										fullWidth
-										label="Complete Name"
-										variant="outlined"
-										name="name"
-										{...getFieldProps('name')}
-										error={Boolean(touched.name && errors.name)}
-										helperText={touched.name && errors.name}
-									/>
+									<MyTextField label="Complete Name" name="name" />
 								</Grid>
 								<Grid item xs={12}>
-									<TextField
-										fullWidth
-										label="Home Address"
-										variant="outlined"
-										name="address"
-										{...getFieldProps('address')}
-										error={Boolean(touched.address && errors.address)}
-										helperText={touched.address && errors.address}
-									/>
+									<MyTextField label="Home Address" name="address" />
 								</Grid>
 								<Grid item xs={12} sm={6}>
-									<TextField
-										fullWidth
-										label="Email Address"
-										variant="outlined"
-										name="email"
-										{...getFieldProps('email')}
-										error={Boolean(touched.email && errors.email)}
-										helperText={touched.email && errors.email}
-									/>
+									<MyTextField label="Email Address" name="email" />
 								</Grid>
 								<Grid item xs={12} sm={6}>
-									<TextField
-										fullWidth
-										label="Contact Number"
-										variant="outlined"
-										name="contact"
-										{...getFieldProps('contact')}
-										error={Boolean(touched.contact && errors.contact)}
-										helperText={touched.contact && errors.contact}
-									/>
+									<MyTextField label="Contact Number" name="contact" />
 								</Grid>
 								<Grid item xs={12}>
-									<TextField
-										fullWidth
-										label="Company"
-										variant="outlined"
-										name="company"
-										{...getFieldProps('company')}
-										error={Boolean(touched.company && errors.company)}
-										helperText={touched.company && errors.company}
-									/>
+									<MyTextField label="Company" name="company" />
 								</Grid>
 								<Grid item xs={12}>
-									<TextField
-										fullWidth
+									<MyTextField
 										label="I am interested in your franchise because:"
-										variant="outlined"
+										name="purpose"
 										multiline
 										rows={3}
-										name="purpose"
-										{...getFieldProps('purpose')}
-										error={Boolean(touched.purpose && errors.purpose)}
-										helperText={touched.purpose && errors.purpose}
 									/>
 								</Grid>
 								<Grid item xs={12}>
-									<TextField
-										fullWidth
+									<MyTextField
 										label="Area/Site location proposed (Please describe):"
-										variant="outlined"
+										name="location"
 										multiline
 										rows={3}
-										name="location"
-										{...getFieldProps('location')}
-										error={Boolean(touched.location && errors.location)}
-										helperText={touched.location && errors.location}
 									/>
 								</Grid>
 								<Grid item sm={6}>
@@ -220,14 +170,9 @@ export default function ApplicationForm() {
 									</FormControl>
 								</Grid>
 								<Grid item xs={12}>
-									<TextField
-										fullWidth
+									<MyTextField
 										label="I can invest the total amount of (in pesos):"
-										variant="outlined"
 										name="investment"
-										{...getFieldProps('investment')}
-										error={Boolean(touched.investment && errors.investment)}
-										helperText={touched.investment && errors.investment}
 									/>
 								</Grid>
 								<Grid item xs={12}>
