@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ApplicationForm() {
 	const classes = useStyles();
+	const formEl = React.useRef(null);
 
 	return (
 		<Container maxWidth="md">
@@ -50,26 +51,41 @@ export default function ApplicationForm() {
 							.max(50, 'Full name too long'),
 						address: Yup.string().required('Required'),
 						email: Yup.string().email('Invalid email').required('Required'),
-						contact: Yup.string().required('Required'),
+						contact: Yup.number()
+							.integer()
+							.typeError('Please enter a valid contact number')
+							.required('Required'),
 						company: Yup.string(),
 						purpose: Yup.string().required('Required'),
 						location: Yup.string().required('Required'),
 						active_passive: Yup.string().required('Required'),
 						individual_partners: Yup.string().required('Required'),
-						investment: Yup.string().required('Required')
+						investment: Yup.number()
+							.typeError('Please enter a valid currency number')
+							.required('Required')
 					})}
+					onSubmit={() => {
+						formEl.current.submit();
+					}}
 				>
-					{({touched, errors, getFieldProps}) => (
+					{({touched, errors, getFieldProps, handleSubmit}) => (
 						<form
 							autoComplete="off"
 							action="https://formsubmit.co/a4b713f7a49c57286bf30fff7f50de11"
 							method="POST"
+							ref={formEl}
+							onSubmit={handleSubmit}
 						>
 							<input type="hidden" name="_template" value="table" />
 							<input
 								type="hidden"
 								name="_subject"
 								value="Franchise Application"
+							/>
+							<input
+								type="hidden"
+								name="_next"
+								value="http://localhost:3000/Franchise"
 							/>
 							<Grid container spacing={2}>
 								<Grid item xs={12}>
