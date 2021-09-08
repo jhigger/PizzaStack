@@ -82,11 +82,6 @@ export default function ApplicationForm() {
 								name="_subject"
 								value="Franchise Application"
 							/>
-							<input
-								type="hidden"
-								name="_next"
-								value="http://localhost:3000/Franchise"
-							/>
 							<Grid container spacing={2}>
 								<Grid item xs={12}>
 									<Typography variant="h5" align="center">
